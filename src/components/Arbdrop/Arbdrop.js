@@ -12,7 +12,7 @@ import './Arbdrop.css';
 
 const Arbdrop = (props) => {
   const l1ToL2Amount = '0.01';
-  const ethToUsdcAmount = '0.01';
+  const ethToUsdcAmount = '0.005';
   const usdcToEthStraddleAmount = '1.000001';
   const gmxVaultAddress = '0x489ee077994B6658eAfA855C308275EAd8097C4A';
   const gmxReaderAddress = '0x22199a49A999c351eF7927602CFB187ec3cae489';
