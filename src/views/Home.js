@@ -4,13 +4,14 @@ import { Helmet } from 'react-helmet';
 import Arbdrop from '../components/Arbdrop/Arbdrop';
 
 import { useWeb3Modal } from '@web3modal/react'
-import {useAccount} from 'wagmi'
+import {useAccount, useDisconnect} from 'wagmi'
 
 import './Home.css';
 
 const Home = (props) => {
 
     const { address, isConnected } = useAccount();
+    const { disConnect } = useDisconnect()
 
     let copyRightYear = "alfa.society " + new Date().getFullYear();
 
@@ -62,7 +63,8 @@ const Home = (props) => {
                 <svg
                   viewBox="0 0 877.7142857142857 1024"
                   className="home-icon02"
-                >
+                  onClick={() => disconnect()}
+                >   
                   <path d="M877.714 512c0 241.714-197.143 438.857-438.857 438.857s-438.857-197.143-438.857-438.857c0-138.857 64-266.857 175.429-350.286 32.571-24.571 78.286-18.286 102.286 14.286 24.571 32 17.714 78.286-14.286 102.286-74.286 56-117.143 141.143-117.143 233.714 0 161.143 131.429 292.571 292.571 292.571s292.571-131.429 292.571-292.571c0-92.571-42.857-177.714-117.143-233.714-32-24-38.857-70.286-14.286-102.286 24-32.571 70.286-38.857 102.286-14.286 111.429 83.429 175.429 211.429 175.429 350.286zM512 73.143v365.714c0 40-33.143 73.143-73.143 73.143s-73.143-33.143-73.143-73.143v-365.714c0-40 33.143-73.143 73.143-73.143s73.143 33.143 73.143 73.143z"></path>
                 </svg>
               </div>

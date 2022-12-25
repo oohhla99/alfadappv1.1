@@ -31,8 +31,8 @@ const Page = (props) => {
   // const bal = balanceOfCheck
   // console.log(bal)
 
-  // const balance = (balanceOfCheck ? hexToDecimal(balanceOfCheck._hex)/1e18 : 0 );
-  // console.log(balance);
+  const balance = (balanceOfCheck ? hexToDecimal(balanceOfCheck.data._hex)/1e18 : 0 );
+  console.log(balance);
 
   //function to enter Dapp
   const enterDapp = () => {
@@ -40,7 +40,7 @@ const Page = (props) => {
      navigate('/alpha-teleporthq')
     } else {
      toast.warning('You need to be holding atleast 5,000,000 (0.5%) $ALFA tokens before you can continue! Proceed by getting $ALFA token', {
-     position: toast.POSITION.TOP_CENTER,
+     position: toast.POSITION.TOP_CENTER, theme: "dark",
      autoClose: 9000
     });
  }
