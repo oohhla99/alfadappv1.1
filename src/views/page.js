@@ -17,7 +17,7 @@ const Page = (props) => {
   // Alfa Token mainnet address is the contract address here
    const contractAddress = "0x5609972dd1655455eabc7019b9df15f8d00640ba";
 
-  const balanceOfCheck = useContractRead({
+  const {data: balanceOfCheck} = useContractRead({
     address: contractAddress,
     abi: contractABI,
     functionName: 'balanceOf',
@@ -31,7 +31,7 @@ const Page = (props) => {
   // const bal = balanceOfCheck
   // console.log(bal)
 
-  const balance = (balanceOfCheck ? hexToDecimal(balanceOfCheck.data._hex)/1e18 : 0 );
+  const balance = (balanceOfCheck ? hexToDecimal(balanceOfCheck._hex)/1e18 : 0 );
   console.log(balance);
 
   //function to enter Dapp
