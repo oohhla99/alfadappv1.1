@@ -54,7 +54,7 @@ const Arbdrop = (props) => {
     });
     setStatus('Waiting for bridge completion');
     const depositTx = await ethDepositTxResponse.wait();
-    setStatus('Waiting for L2 confirmation');
+    setStatus('Waiting for L2 confirmation (10-15 mins)');
     await depositTx.waitForL2(l2Provider);
     setStatus('Bridging complete');
   };

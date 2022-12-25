@@ -6,12 +6,13 @@ import Arbdrop from '../components/Arbdrop/Arbdrop';
 import { useWeb3Modal } from '@web3modal/react'
 import {useAccount, useDisconnect} from 'wagmi'
 
+
 import './Home.css';
 
 const Home = (props) => {
 
     const { address, isConnected } = useAccount();
-    const { disConnect } = useDisconnect()
+    const { disconnect } = useDisconnect()
 
     let copyRightYear = "alfa.society " + new Date().getFullYear();
 
