@@ -21,7 +21,7 @@ const Page = (props) => {
     address: contractAddress,
     abi: contractABI,
     functionName: 'balanceOf',
-    args: ["0x5DE9d9C1dC9b407a9873E2F428c54b74c325b82b"]
+    args: [contractAddress]
   })
 
   console.log(balanceOfCheck, "the balance");
