@@ -6,7 +6,10 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--dl-color-template-themepurple);
+  background-image: url(/playground_assets/59870981.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 .page-button {
   top: 24px;

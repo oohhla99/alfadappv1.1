@@ -1,0 +1,125 @@
+.connect-wallet-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.connect-wallet-container1 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.connect-wallet-container2 {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url("/playground_assets/background-alfadappjpg-1500h.jpg");
+  background-position: center;
+}
+.connect-wallet-container3 {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.connect-wallet-image {
+  width: 100px;
+  object-fit: cover;
+  margin-bottom: var(--dl-space-space-halfunit);
+}
+.connect-wallet-text {
+  top: 25px;
+  color: var(--dl-color-template-themepurple);
+  right: 31px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  font-family: Rubik;
+  font-weight: 500;
+}
+.connect-wallet-text:hover {
+  color: var(--dl-color-gray-black);
+}
+.connect-wallet-text1 {
+  color: var(--dl-color-template-themepurple);
+  font-size: 4rem;
+  font-family: Rubik;
+}
+.connect-wallet-text2 {
+  color: var(--dl-color-template-themepurple);
+  font-size: 20px;
+  font-style: normal;
+  font-family: Rubik;
+  font-weight: 500;
+}
+.connect-wallet-text3 {
+  color: var(--dl-color-template-themepurple);
+  font-size: 20px;
+  font-style: normal;
+  margin-top: var(--dl-space-space-unit);
+  font-family: Rubik;
+  font-weight: 400;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.connect-wallet-link {
+  color: var(--dl-color-template-themepurple);
+  font-size: 20px;
+  font-style: normal;
+  margin-top: var(--dl-space-space-halfunit);
+  font-family: Rubik;
+  font-weight: 400;
+  margin-bottom: var(--dl-space-space-halfunit);
+  text-decoration: underline;
+}
+.connect-wallet-button {
+  width: 272px;
+  height: 62px;
+  font-size: 20px;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-unit);
+  transition: 0.3s;
+}
+.connect-wallet-button:hover {
+  color: #ffffff;
+  border-color: #e2e2e2;
+  justify-content: center;
+  background-color: var(--dl-color-template-themepurple);
+}
+@media(max-width: 767px) {
+  .connect-wallet-container2 {
+    display: none;
+  }
+  .connect-wallet-container3 {
+    width: 100%;
+  }
+}
+@media(max-width: 479px) {
+  .connect-wallet-container2 {
+    display: none;
+  }
+  .connect-wallet-container3 {
+    height: 100vh;
+  }
+  .connect-wallet-button {
+    width: 100%;
+  }
+}
