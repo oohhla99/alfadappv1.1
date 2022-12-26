@@ -37,7 +37,7 @@ const ConnectWallet = (props) => {
     if (!isConnected) {
      toast.warning('Please connect your wallet first to continue!', {
      position: toast.POSITION.TOP_CENTER, 
-     theme: "dark",
+     theme: "light",
      draggablePercent: 60,
      autoClose: 5000
      });
@@ -51,7 +51,7 @@ const ConnectWallet = (props) => {
     } else {
      toast.warning('You need to be holding atleast 5,000,000 (0.5%) $ALFA tokens before you can continue! Proceed by getting $ALFA token', {
      position: toast.POSITION.TOP_CENTER, 
-     theme: "dark",
+     theme: "light",
      draggablePercent: 60,
      autoClose: 5000
     });
