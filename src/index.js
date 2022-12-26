@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useAccount } from "wagmi";
 
 // --------- WAGMI package importation ---------
 import '@rainbow-me/rainbowkit/styles.css';
@@ -19,10 +20,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 import './style.css'
 import Home from './views/Home'
-import PageHome from './views/page'
+// import PageHome from './views/page'
+import ConnectWalletPage from './views/connect-wallet'
 
 const { chains, provider } = configureChains(
-  [mainnet, polygon, optimism, arbitrum],
+  [ mainnet, polygon, optimism, arbitrum ],
   [
     alchemyProvider({ apiKey: process.env.PROJECT_ID }),
     publicProvider()
@@ -40,16 +42,19 @@ const wagmiClient = createClient({
   provider
 })
 
-
 const App = () => {
+
+   //using the user address when they get connected using their wallet to dynamically navigate the user to the Home page 
+   const { address } = useAccount();
+
   return (
     <Router>
       <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
        <ToastContainer />
        <Routes>
-         <Route path="/" element={<PageHome />} />
-         <Route path="/alpha-teleporthq" element={<Home />} />
+         <Route path="/" element={<ConnectWalletPage />} />
+         <Route path={`/${address}`} element={<Home />} />
       </Routes>
       </RainbowKitProvider>
       </WagmiConfig>

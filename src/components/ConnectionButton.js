@@ -1,5 +1,4 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import '../views/page.css'
 
 export const ConnectionButton = () => {
   return (
@@ -38,6 +37,7 @@ export const ConnectionButton = () => {
                   <button
                     style={{
                       color: "#5f17ffff",
+                      fontSize: "18px"
                     }}
                     onClick={openConnectModal}
                     type="button"
@@ -49,9 +49,12 @@ export const ConnectionButton = () => {
               if (chain.unsupported) {
                 return (
                   <button
-                    className=""
                     onClick={openChainModal}
                     type="button"
+                    style={{
+                      color: "#5f17ffff",
+                      fontSize: "20px"
+                    }}
                   >
                     Wrong network
                   </button>
@@ -61,9 +64,12 @@ export const ConnectionButton = () => {
                 <div style={{ display: "flex", gap: 12 }}>
                   <button
                     onClick={openChainModal}
-                    // style={{ display: 'flex', alignItems: 'center' }}
+                    style={{ 
+                    display: 'flex', 
+                    alignItems: 'center',
+                    color: '#5f17ffff'
+                  }}
                     type="button"
-                    className="main__button hidden"
                   >
                     {chain.hasIcon && (
                       <div
@@ -73,7 +79,7 @@ export const ConnectionButton = () => {
                           height: 12,
                           borderRadius: 999,
                           overflow: "hidden",
-                          marginRight: 4,
+                          marginRight: 5,
                         }}
                       >
                         {chain.iconUrl && (
@@ -87,12 +93,17 @@ export const ConnectionButton = () => {
                     )}
                     {chain.name}
                   </button>
+                  <span>{" | "}</span>
                   <button
                     onClick={openAccountModal}
                     type="button"
-                    className=""
+                    style={{
+                      color: "#5f17ffff",
+                      fontSize: "20px"
+                    }}
                   >
-                    {account.displayName}
+                    <span>Disconnect</span>
+                    {/* {account.displayName} */}
                     {/* {account.displayBalance
                       ? ` (${account.displayBalance})`
                       : ''} */}

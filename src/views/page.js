@@ -34,31 +34,39 @@ const Page = (props) => {
   const balance = (balanceOfCheck ? hexToDecimal(balanceOfCheck._hex)/1e18 : 0 );
   console.log(balance);
 
-  //function to enter Dapp
+ // if user wallet is not connected, this function will be called to the user attention
+  const connectWalletError = () => {
+    if (!isConnected) {
+     toast.warning('Please connect your wallet first to continue', {
+     position: toast.POSITION.TOP_LEFT, 
+     theme: "dark",
+     autoClose: 5000
+     });
+   }
+  }
+
+  //if user wallet does not have up to 5,000,00 ALFA TOKEN, this function will be called to the user attention
   const enterDapp = () => {
     if (balance >= 5000000) {
      navigate('/alpha-teleporthq')
     } else {
      toast.warning('You need to be holding atleast 5,000,000 (0.5%) $ALFA tokens before you can continue! Proceed by getting $ALFA token', {
-     position: toast.POSITION.TOP_CENTER, theme: "dark",
-     autoClose: 9000
+     position: toast.POSITION.TOP_CENTER, 
+     theme: "dark",
+     autoClose: 5000
     });
  }
 }
+ 
   return (
     <div className="page-container">
       <Helmet>
         <title>Page - alfa dapp</title>
         <meta property="og:title" content="Page - alfa dapp" />
       </Helmet>
-      {/* {!isConnected ? */}
        <button className="page-button themebutton button">
         <ConnectionButton></ConnectionButton>
        </button>
-       {/* :  */}
-      {/* //  {address?.slice(0, 10)}.... */}
-       {/* <button className="page-button themebutton button"></button> */}
-       {/* } */}
       <div className="page-banner">
         <img
           src="/playground_assets/dappper.svg"
@@ -78,7 +86,7 @@ const Page = (props) => {
         >
           Get $ALFA
         </a>
-        <button className="page-button1 themebutton button" onClick={enterDapp}>enter dapp</button>
+        <button className="page-button1 themebutton button" onClick={!isConnected ? connectWalletError : enterDapp}>enter dapp</button>
       </div>
     </div>
   )
