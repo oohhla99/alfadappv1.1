@@ -93,7 +93,7 @@ export const ConnectionButton = () => {
                     )}
                     {chain.name}
                   </button>
-                  <span style="font-size:18px">{" | "}</span>
+                  <span>{" | "}</span>
                   <button
                     onClick={openAccountModal}
                     type="button"
