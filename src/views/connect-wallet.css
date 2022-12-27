@@ -53,6 +53,7 @@
   transition: 0.3s;
   font-family: Rubik;
   font-weight: 600!important;
+  cursor: pointer;
 }
 .connect-wallet-text:hover {
   color: var(--dl-color-gray-black);
