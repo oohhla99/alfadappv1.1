@@ -211,7 +211,7 @@ closeButton.addEventListener("click", function() {
                 More info
               </a>
               <button className="home-button2 themebutton hidebutton button">
-                Collect
+                start
               </button>
             </div>
           </div>
