@@ -44,7 +44,7 @@
   margin-bottom: var(--dl-space-space-halfunit);
 }
 .connect-wallet-text {
-  top: 25px;
+  top: 20px;
   color: var(--dl-color-template-themepurple);
   right: 20px;
   position: absolute;
@@ -52,7 +52,7 @@
   font-style: normal;
   transition: 0.3s;
   font-family: Rubik;
-  font-weight: 500;
+  font-weight: 600!important;
 }
 .connect-wallet-text:hover {
   color: var(--dl-color-gray-black);
