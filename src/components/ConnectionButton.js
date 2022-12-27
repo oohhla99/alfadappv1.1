@@ -42,7 +42,7 @@ export const ConnectionButton = () => {
                     onClick={openConnectModal}
                     type="button"
                   >
-                    Connect Wallet
+                    connect wallet
                   </button>
                 );
               }
