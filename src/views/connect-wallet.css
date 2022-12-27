@@ -46,7 +46,7 @@
 .connect-wallet-text {
   top: 25px;
   color: var(--dl-color-template-themepurple);
-  right: 24px;
+  right: 20px;
   position: absolute;
   font-size: 20px;
   font-style: normal;
