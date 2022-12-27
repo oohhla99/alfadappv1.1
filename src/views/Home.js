@@ -184,7 +184,7 @@ closeButton.addEventListener("click", function() {
               </a>
               <div className="home-container5 hidebutton">
                 <button className="home-button1 themebutton button">
-                  Collect
+                  start
                 </button>
               </div>
             </div>
