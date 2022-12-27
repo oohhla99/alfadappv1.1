@@ -61,13 +61,14 @@ export const ConnectionButton = () => {
                 );
               }
               return (
-                <div style={{ display: "flex", gap: 12 }}>
+                <div style={{ display: "flex", gap: 4 }}>
                   <button
                     onClick={openChainModal}
                     style={{ 
                     display: 'flex', 
                     alignItems: 'center',
-                    color: '#5f17ffff'
+                    color: '#5f17ffff',
+                    fontSize: "18px"
                   }}
                     type="button"
                   >
@@ -79,7 +80,7 @@ export const ConnectionButton = () => {
                           height: 12,
                           borderRadius: 999,
                           overflow: "hidden",
-                          marginRight: 5,
+                          marginRight: 8,
                         }}
                       >
                         {chain.iconUrl && (
@@ -93,7 +94,7 @@ export const ConnectionButton = () => {
                     )}
                     {chain.name}
                   </button>
-                  <span>{" | "}</span>
+                  <span style={{ fontSize: "18px" }}>{" | "}</span>
                   <button
                     onClick={openAccountModal}
                     type="button"
