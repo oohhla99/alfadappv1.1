@@ -53,7 +53,7 @@ export const ConnectionButton = () => {
                     type="button"
                     style={{
                       color: "#5f17ffff",
-                      fontSize: "20px"
+                      fontSize: "18px"
                     }}
                   >
                     Wrong network
@@ -93,13 +93,13 @@ export const ConnectionButton = () => {
                     )}
                     {chain.name}
                   </button>
-                  <span>{" | "}</span>
+                  <span style="font-size:18px">{" | "}</span>
                   <button
                     onClick={openAccountModal}
                     type="button"
                     style={{
                       color: "#5f17ffff",
-                      fontSize: "20px"
+                      fontSize: "18px"
                     }}
                   >
                     <span>Disconnect</span>
