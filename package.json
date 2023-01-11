@@ -4,6 +4,12 @@
   "private": true,
   "dependencies": {
     "@arbitrum/sdk": "^3.0.0",
+    "@eth-optimism/sdk": "^1.8.0",
+    "@hop-protocol/sdk": "^0.0.1-beta.411",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "@craco/craco": "^7.0.0-alpha.0",
     "@rainbow-me/rainbowkit": "^0.8.1",
     "@web3modal/ethereum": "^2.0.0-beta.10",
