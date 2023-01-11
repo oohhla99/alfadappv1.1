@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@arbitrum/sdk": "^3.0.0",
-    "@eth-optimism/sdk": "^1.8.0",
+   
     "@hop-protocol/sdk": "^0.0.1-beta.411",
     "assert": "^2.0.0",
     "browserify-zlib": "^0.2.0",
