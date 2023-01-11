@@ -3,6 +3,7 @@ import DangerousHTML from 'dangerous-html/react';
 import { Helmet } from 'react-helmet';
 import Arbdrop from '../components/Arbdrop/Arbdrop';
 import { useNavigate } from 'react-router-dom';
+import Metadrop from '../components/Metadrop/Metadrop';
 
 import { useWeb3Modal } from '@web3modal/react'
 import {useAccount, useDisconnect} from 'wagmi'
@@ -182,11 +183,7 @@ closeButton.addEventListener("click", function() {
               >
                 More info
               </a>
-              <div className="home-container5 hidebutton">
-                <button className="home-button1 themebutton button">
-                  start
-                </button>
-              </div>
+              <Metadrop rootClassName="component1-root-class-name"></Metadrop>
             </div>
             <div className="home-schedule3 card">
               <img
